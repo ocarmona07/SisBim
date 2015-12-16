@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2c153c6c5629404682e3a0297d26cb57" Name="Diagram1">
+        <EntityTypeShape EntityType="SisBimModel.Perfiles" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SisBimModel.Reservas" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="SisBimModel.Salas" Width="1.5" PointX="7.625" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SisBimModel.Usuarios" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
+        <AssociationConnector Association="SisBimModel.FK_USUARIOS_REFERENCE_PERFILES" ManuallyRouted="false" />
+        <AssociationConnector Association="SisBimModel.FK_RESERVAS_REFERENCE_SALAS" ManuallyRouted="false" />
+        <AssociationConnector Association="SisBimModel.FK_RESERVAS_REFERENCE_USUARIOS" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

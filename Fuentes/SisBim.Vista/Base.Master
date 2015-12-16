@@ -1,0 +1,147 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Base.master.cs" Inherits="SisBim.Vista.Base" %>
+
+<!DOCTYPE html>
+<html lang="es">
+<head runat="server">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SisBim - Sistema de Reservas para Bibliotecas</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <!-- bootstrap theme -->
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <!--external css-->
+    <!-- font icon -->
+    <link href="css/elegant-icons-style.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <!-- Custom styles -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-responsive.css" rel="stylesheet" />
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+      <script src="js/lte-ie7.js"></script>
+    <![endif]-->
+    <asp:ContentPlaceHolder ID="cphMasterHead" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <!-- container section start -->
+    <section id="container" class="">
+        <!--header start-->
+
+        <header class="header dark-bg">
+            <div class="toggle-nav">
+                <div class="icon-reorder tooltip" data-original-title="Menú de navegación" data-placement="bottom"></div>
+            </div>
+
+            <!--logo start-->
+            <a href="/Inicio.aspx" class="logo"></a>
+            <!--logo end-->
+
+            <div class="top-nav notification-row">
+                <!-- notificatoin dropdown start-->
+                <ul class="nav pull-right top-menu">
+
+                    <!-- user login dropdown start-->
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="profile-ava">
+                                <img alt="" src="img/users/avatar1_small.jpg">
+                            </span>
+                            <span class="username">
+                                <asp:Label runat="server" ID="lblUsername" /></span>
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu extended logout">
+                            <div class="log-arrow-up"></div>
+                            <li class="eborder-top">
+                                <a href="#"><i class="icon_profile"></i>Mi Perfil</a>
+                            </li>
+                            <li>
+                                <a href="Ayuda.aspx"><i class="icon_question"></i>Ayuda</a>
+                            </li>
+                            <li>
+                                <a href="Index.aspx"><i class="icon_key_alt"></i>Cerrar sesión</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- user login dropdown end -->
+                </ul>
+                <!-- notificatoin dropdown end-->
+            </div>
+        </header>
+        <!--header end-->
+
+        <!--sidebar start-->
+        <aside>
+            <div id="sidebar" class="nav-collapse ">
+                <!-- sidebar menu start-->
+                <ul class="sidebar-menu">
+                    <li class="">
+                        <a class="" href="Inicio.aspx">
+                            <i class="icon_house_alt"></i>
+                            <span>Inicio</span>
+                        </a>
+                    </li>
+                    <li class="sub-menu">
+                        <a class="" href="Reservas.aspx">
+                            <i class="icon_document_alt"></i>
+                            <span>Reservas</span>
+                        </a>
+                    </li>
+                    <li class="sub-menu ">
+                        <a href="javascript:;" class="">
+                            <i class="icon_documents_alt"></i>
+                            <span>Reportes</span>
+                            <span class="menu-arrow arrow_carrot-right"></span>
+                        </a>
+                        <ul class="sub">
+                            <li><a class="" href="InformeDia.aspx">Informe diario</a></li>
+                            <li><a class="" href="GenerarReporte.aspx?Reporte=Semanal"><span>Reporte semanal</span></a></li>
+                            <li><a class="" href="GenerarReporte.aspx?Reporte=Mensual"><span>Reporte mensual</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;" class="">
+                            <i class="icon_desktop"></i>
+                            <span>Administrador</span>
+                            <span class="menu-arrow arrow_carrot-right"></span>
+                        </a>
+                        <ul class="sub">
+                            <li><a class="" href="MantenedorUsuarios.aspx">Usuarios</a></li>
+                            <li><a class="" href="MantenedorSalas.aspx">Salas</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- sidebar menu end-->
+            </div>
+        </aside>
+        <!--sidebar end-->
+        <!--main content start-->
+        <section id="main-content">
+            <section class="wrapper">
+                <!-- page start-->
+                <div>
+                    <asp:ContentPlaceHolder ID="cphMasterBody" runat="server" />
+                </div>
+                <!-- page end-->
+            </section>
+        </section>
+        <!--main content end-->
+
+    </section>
+    <!-- container section end -->
+    <!-- javascripts -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- nice scroll -->
+    <script src="js/jquery.scrollTo.min.js"></script>
+    <script src="js/jquery.nicescroll.js" type="text/javascript"></script>
+    <!--custome script for all page-->
+    <script src="js/scripts.js"></script>
+</body>
+</html>
